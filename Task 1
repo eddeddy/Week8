@@ -1,0 +1,60 @@
+class book():
+    def __init__(self,title,author,year):
+        self.title=title
+        self.author=author
+        self.year=year
+        
+    def showD(self):
+        print("Information",self.title,self.author,self.year)
+
+    def showT(self):
+        print("The title of book -> " ,self.title)
+        
+    def showA(self):
+        print("The author of book -> ",self.author)
+        
+    def showY(self):
+        print("The year of book -> ",self.year)
+        
+    def changeT(self,titleInput):
+         self.title = titleInput
+         return self.title
+        
+    def changeA(self,authorInput):
+        self.author = authorInput
+        return self.author
+    
+    def changeY(self,yearInput):
+        self.year = yearInput
+        return self.year
+
+b0 = book("Book1","Mary",11)
+b1 = book("Book2","Sam",12)
+b2 = book("Book3","Edd",13)
+b3 = book("Book4","Daniel",12)
+
+book = [b0,b1,b2,b3]
+
+for c in book:
+    z=int(input("If you want to see all information press 1 "))
+    if z==1:
+        c.showD()
+        
+    x=int(input("If you want to see something particular press 1 for title , press 2 for author , press 3 for year "))
+    if x==1:
+        c.showT()
+    elif x==2:
+        c.showA()
+    elif x==3:
+        c.showY()
+
+    y=int(input("If you want to change something particular press 1 for title , press 2 for author , press 3 for year "))
+    if y==1:
+        titleInput=input("Another title -> ")
+        print(c.changeT(titleInput))
+    elif y==2:
+        authorInput=input("Another author -> ")
+        print(c.changeA(authorInput))
+    else:
+        yearInput=int(input("Another year -> "))
+        print(c.changeY(yearInput))

@@ -1,0 +1,44 @@
+class car():
+    def __init__(self,brand,maxspeed,mileage):
+        self.brand=brand
+        self.maxspeed=maxspeed
+        self.mileage=mileage
+        
+    def showD(self):
+        print("Information",self.brand,self.maxspeed,self.mileage)
+
+    def showB(self):
+        print("The brand -> " ,self.brand)
+        
+    def showM(self):
+        print("The maxspeed -> ",self.maxspeed)
+        
+    def showMI(self):
+        print("The mileage -> ",self.mileage)
+        
+    def changeMI(self):
+        self.mileage = self.mileage + mile
+        return self.mileage
+   
+c0 = car("car1",330,11000)
+c1 = car("car2",200,12000)
+c2 = car("car3",90,13000)
+c3 = car("car4",220,12000)
+
+car = [c0,c1,c2,c3]
+
+for c in car:
+    z=input("Is the car moving ? (y/n)")
+    if z == 'y':
+        mile=int(input("How many mile the car moving ?"))
+        
+    print(c.changeMI())
+    print(c.showD())
+        
+    x=int(input("If you want to see something particular press 1 for title , press 2 for author , press 3 for year "))
+    if x==1:
+        c.showB()
+    elif x==2:
+        c.showM()
+    elif x==3:
+        c.showMI()
